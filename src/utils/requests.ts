@@ -57,7 +57,7 @@ export const setTransactionApproval = ({ transactionId, value }: SetTransactionA
   }
 
   transaction.approved = value
-  data.transactions = data.transactions.map((currentTransaction) =>
+  data.transactions.map((currentTransaction) =>
     currentTransaction.id === transactionId ? transaction : currentTransaction
   )
 }
